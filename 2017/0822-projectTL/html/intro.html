@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+    layout:decorator="layout/tlLayout">
+
+<th:block layout:fragment="head-css"><link rel="stylesheet" th:href="|${ui['static.base']}/css/tl.css|"></th:block>
+
+<head>
+</head>
+
+<body th:classappend="'page-' + ${navigation.id}" layout:fragment="body-container">
+<!-- GNB -->
+<th:block layout:fragment="gnb" th:replace="common/inc/gnb :: gnb"></th:block>
+<!-- // GNB -->
+
+<div id="container" layout:fragment="content">
+	<div class="main-area">
+	    <h1 class="sequence-title">Project TL</h1>
+	    <p>리니지 이터널 CBT PASS 및 저항군 패키지 혜택에 대해서는 추후 안내드릴 수 있도록 하겠습니다.</p>
+	</div>
+    <div class="footer">
+        Copyright © NCSOFT Corporation.All Rights Reserved.
+    </div>    
+</div>
+
+<!-- Logger, Google Analytics -->
+<th:block layout:fragment="loggers" th:replace="common/inc/loggers :: logger-js"></th:block>
+<!-- // Logger, Google Analytics -->
+</body>
+</html>
