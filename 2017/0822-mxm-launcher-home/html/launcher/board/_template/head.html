@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+</head>
+<body>
+
+<!-- meta inc -->
+<th:block th:fragment="board-meta">
+    <title th:text="${article.title} + ' - ' + ${article.category.categoryName}"></title>
+    <meta name="description" th:content="${article.summary}">
+    <meta property="og:title" th:content="${article.title} + ' - ' + ${article.category.categoryName} + ' : ' + #{meta.title}">
+    <meta name="twitter:description" th:content="${article.summary}">
+</th:block>
+
+<!--/* 코드안보임 */-->
+
+</body>
+</html>

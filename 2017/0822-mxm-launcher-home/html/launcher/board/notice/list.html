@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+    layout:decorator="layout/launcherSubLayout">
+<head>
+   <title th:text="#{${menu.title}}"></title>
+</head>
+<body>
+<div layout:fragment="content">
+
+    <!-- (s) 게시물 목록 -->
+    <div th:replace="launcher/board/_template/list :: articleList"></div>
+    <!-- (e) 게시물 목록 -->
+
+    <th:block layout:fragment="page-js" th:replace="launcher/board/_template/list :: articleListJs"></th:block>
+
+</div>
+</body>
+</html>

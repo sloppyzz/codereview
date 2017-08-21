@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+	<!-- (s) 게시물 목록 -->
+	<th:block th:fragment="articleList">
+		<div id="ncCommunityList" class="nc-community-list"></div>
+	</th:block>
+	<!-- (e) 게시물 목록 -->
+	
+	<th:block th:fragment="articleListJs">
+		<script th:src="|${ui['wstatic.common']}/js/uikit/share2/dist/share.2.0.0.js|"></script>
+	    <script th:src="|${ui['wstatic.uikit']}/nccommunity/js/index.1.3.17-2.js|"></script>
+	    <script>
+	    var _path = '[[${ui["api.domain"]}]]/';
+	    var _boardInfo = {
+	        type: 'list',
+	        boardAlias: '[[${boardAlias}]]' || 'free'
+	    }
+	    </script>
+	    <script th:src="|${ui['wstatic.common']}/js/lib/slick.min.js|"></script>
+	    <script th:src="|${ui['wstatic']}/${menu.baseUrl}/js/board.launcher.config${profileUtil.isLive() ? '' : '.dev'}.js|"></script>
+	    
+	    <!-- tab flicking -->
+	    <script th:src="|${ui['wstatic']}/${menu.baseUrl}/js/horizontalBox.js|"></script>
+	    <script>
+	    // flicking menu
+	    $(".depth3-list-wrap").horizontalBox({
+	      item: '.depth3-list > .depth3-list-items'
+	    });
+	    </script>
+	</th:block>
+</body>
+</html>

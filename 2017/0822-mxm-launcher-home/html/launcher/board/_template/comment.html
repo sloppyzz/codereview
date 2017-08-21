@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+</head>
+<body>
+
+<!-- (s) 게시물 view -->
+<th:block th:fragment="articleComment">
+    <div id="ncCommunityComment" class="nc-community-comment"></div>
+</th:block>
+<!-- (e) 게시물 view -->
+
+<!-- JS -->
+<th:block th:fragment="articleCommentJs">
+    <script type="text/javascript" th:inline="text">
+    if( [[${menu.isComment}]] ){
+        var comment = new ui.ncCommunity.Comment( $( '#ncCommunityComment' ), {
+            board: '[[${boardAlias}]]',
+            isEmoticon: false,
+            emoticons: [],
+            isCommentUpload: false,
+            isCommentEmoticon: false,
+            isShowPrevNextArticle: false,
+            isShowNoticeComment: true,
+            isListCount: true,
+        });
+        comment.get();  
+    }
+    </script>
+</th:block>
+
+<!-- 게시판이 아닌 프로모션 등에서 단독으로 쓰일때 JS -->
+<th:block th:fragment="singleCommentJs">
+    <script type="text/javascript" th:src="${ui['wstatic.uikit']} + '/nccommunity/js/index.1.3.17-2${profileUtil.isLive() ? '' : '.dev'}.js'"></script>
+    <script type="text/javascript" th:inline="text">
+    var today = '[[${T(java.time.LocalDateTime).now()}]]';    
+    var comment = new ui.ncCommunity.Comment( $( '#ncCommunityComment' ), {
+    	board: '[[${boardAlias}]]',
+		isPaging: true, 
+		isNoReply: true,
+		size: 5
+    });
+    comment.get();
+    </script>
+</th:block>
+
+</body>
+</html>

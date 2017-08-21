@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html th:lang="${#locale.language}"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+    th:with="
+        menu = ${@clientMenuService.getMenu()},
+        profileUtil = ${T(com.nc.brick.modules.core.util.ProfileUtil)},
+        securityUtil = ${T(com.nc.brick.modules.plaync.security.util.PlayncSecurityRequestAttributeUtil)},
+        mainContentsUtil = ${T(com.nc.brick.modules.app.maincontents.util.MainContentsRequestAttributeUtil)},
+        uiUtil = ${T(com.nc.brick.modules.web.common.util.UiUtil)},
+        ui = ${@uiPropertiesMap},
+        path = ${#httpServletRequest.servletPath},
+        region = ${profileUtil.isKr() ? 'kr' : profileUtil.isTw() ? 'tw' : profileUtil.isJp() ? 'jp' : ''},
+        serviceEnv = ${profileUtil.isOpdev() ? 'opdev' : profileUtil.isRc() ? 'rc' : profileUtil.isStageAndLive() ? 'live' : serviceEnv},
+        isLogin = ${securityUtil.isLogin()},
+        launcherVer=v1.6.1
+        " >
+<head layout:fragment="head">
+    <title th:text="#{${menu.meta.title}}"></title>
+    <th:block th:replace="common/inc/head :: shortcut"></th:block>
+</head>
+
+
+<body th:class="|mxm ${region}|">
+<div class="wrap">
+    <!-- (s) contents -->
+    <div id="container" class="container" layout:fragment="content"></div>
+    <!-- (e) contents -->
+</div>
+
+<div class="ly-player" style="display:none">
+    <button type="button" id="btnPlayerClose" class="btn btn--ly-close">
+        <i class="ico ico--close"></i>
+        <span class="blind">레이어 닫기</span>
+    </button>
+    <div class="player-container">
+        <iframe id="videoPlayer" class="player-iframe" type="text/html" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+
+
+<th:block layout:fragment="content-js"></th:block>
+<th:block th:if="${profileUtil.isLive()}">
+<!-- loggers -->
+<th:block th:replace="common/inc/loggers :: logger-js"></th:block>
+<!-- // loggers -->
+</th:block>
+</body>
+</html>

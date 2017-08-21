@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+    layout:decorator="layout/commonLayout"
+    >
+<head layout:fragment="head">
+    <title layout:title-pattern="$CONTENT_TITLE : $LAYOUT_TITLE" th:text="#{${menu.meta.title}}"></title>
+    <th:block th:replace="common/inc/head :: meta"></th:block>
+    <th:block th:replace="common/inc/head :: shortcut"></th:block>
+
+    
+    <!-- BOARD -->  
+    <th:block th:if="${ menu.sort eq 'board' }">
+    <link th:if="${menu.isEditor}" rel="stylesheet" th:href="|${ui['wstatic.uikit']}/rwdeditor/css/editor_default.1.1.0-1.min.css|">
+    <link rel="stylesheet" th:href="|${ui['wstatic.uikit']}/nccommunity/css/community_mxm.1.3.17-2.min.css|">
+    </th:block>
+    
+    <!-- JS -->
+    <script th:src="|${ui['wstatic.common']}/js/lib/jquery-3.1.0.min.js|"></script>
+    <th:block th:replace="common/inc/head :: js"></th:block>
+    
+</head>
+<body th:class="|${device} ${currentDevice.getDevicePlatform()} ${region} page-${menu.idx}|" layout:fragment="body-container">
+<!-- CNB -->
+<form name="FrmGNBLogout" id="FrmGNBLogout" th:action="${@environment.getProperty('ui.logoutUrl')}" method="post">
+    <input type="hidden" name="return_url" value="" />
+</form>
+<!-- // CNB -->
+
+<!-- container -->
+<div id="container" class="container">
+    
+    <!-- content -->
+    <div class="section-contents">
+        <div th:class="|content content-${menu.idx}|" layout:fragment="content"></div>
+    </div>
+    <!-- // content -->
+
+</div>
+<!-- // container -->
+
+<th:block th:if="${ menu.sort ne 'board' }">
+    <a href="#" id="btnTop" class="btn-top"><span class="hidden">TOP</span></a>
+</th:block>
+
+<!-- CNB JS  -->
+<th:block layout:fragment="cnb" th:replace="common/inc/cnb :: cnb-js"></th:block>
+<!-- // CNB JS  -->
+
+<th:block layout:fragment="page-js"></th:block>
+
+<th:block th:if="${profileUtil.isLive()}">
+<!-- loggers -->
+<th:block th:replace="common/inc/loggers :: logger-js"></th:block>
+<!-- // loggers -->
+</th:block>
+</body>
+</html>

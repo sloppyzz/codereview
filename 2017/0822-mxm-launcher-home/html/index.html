@@ -1,0 +1,246 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh" class="launcher" >
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" media="all" href="https://rc-wstatic.plaync.co.kr/launcher/nc-launcher/v1.6.1/css/nc_launcher_main_mxm.css?20170712" />
+    <!-- JS -->
+    <script type="text/javascript" src="https://rc-wstatic.plaync.co.kr/launcher/nc-launcher/vendor/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://rc-wstatic.plaync.co.kr/common/js/lib/mustache.js"></script>
+</head>
+
+
+<body class="mxm tw">
+<div class="wrap">
+    <!-- (s) contents -->
+    <div id="container" class="container">
+    <div class="game-grade"></div>
+    <section class="contents-cards-container">
+        <!-- mainContents [launcher-card-order] --><div class="contents-card-list" id="contentsCardList">
+
+  <div class="contents-card-outer" id="launcher-notice" >
+  </div>
+
+  <div class="contents-card-outer" id="launcher-guide" >
+  </div>
+
+  <div class="contents-card-outer" id="launcher-nshop" >
+  </div>
+
+  <div class="contents-card-outer" id="launcher-article" >
+  </div>
+
+  <div class="contents-card-outer" id="launcher-promotion" >
+  </div>
+
+  <div class="contents-card-outer" id="launcher-video-list" >
+  </div>
+
+</div><!-- // mainContents [launcher-card-order] -->
+        <div id="contents-data" style="display:none;">
+             <div class="content-video-list"><!-- mainContents [launcher-video-list] --> <div class="contents-card card--type-2" data-card-id="1">
+      <div class="contents-card__bg">
+          <span class="card-img" style="background-image: url('https://rc-upload.plaync.com/file/contents/download/20170818162845-BU1UuGuvK00wEGyhEda20-v4')"></span>
+          <span class="card-img-mask"><i class="card-img-mask__bg"></i></span>
+      </div>
+   
+      <div class="card-article__label">
+          <span class="label">MOVIE</span>
+      </div>
+   
+      <ul class="card-vod-list">
+        
+          <li class="card-vod-list__item" style="display:block">
+              <span class="">동영상제목1</span>
+              <button class="btn btn--play" data-play-url="https://youtu.be/i5juVQ40IUE">
+                  <span class="btn--play__circle"></span>
+                  <span class="btn--play__arrow"></span>
+                  <span class="blind">재생</span>
+              </button>
+          </li>
+        
+      </ul>
+  </div>
+<!-- // mainContents [launcher-video-list] --></div>
+             <div class="content-promotion"><!-- mainContents [launcher-promotion] --><div class="contents-card card--type-2" data-card-id="6">
+    <div class="sub-contents-card-list">
+      
+        <div class="sub-contents-card" data-sub-card-id="0" data-show="block">
+            <div class="contents-card__bg">
+                <span class="card-img" style="background-image: url('https://rc-upload.plaync.com/file/contents/download/20170818162816-Sqv8oOwoT3UCN3oOZDS10-v4')"></span>
+                <span class="card-img-mask"><i class="card-img-mask__bg"></i></span>
+            </div>
+            
+            <div class="card-article__label">
+                <span class="label">라벨1</span>
+            </div>
+            
+            <div class="contents-card-article">
+                <p class="card-article__tit"><strong>이벤트명1</strong></p>
+                <p class="card-article__summary">요약1</p>
+            </div>
+            <a href="#" target="_blank" class="contents-card__link">상세보기</a>
+        </div>
+      
+    </div>
+</div><!-- // mainContents [launcher-promotion] --></div>
+             <div class="content-nshop"><!-- mainContents [launcher-nshop] --><div class="contents-card card--type-5" data-card-id="3">
+    <div class="sub-contents-card-list">
+        
+        <div class="sub-contents-card" data-sub-card-id="0" data-show="block">
+            <div class="contents-card__bg">
+                <span class="card-img" style="background-image: url('https://rc-upload.plaync.com/file/contents/download/20170818162747-DLfT2ARbmrvYo5OQXR3w0-v4')"></span>
+                <span class="card-img-mask"><i class="card-img-mask__bg"></i></span>
+            </div>
+            <div class="contents-card-article">
+                <p class="card-article__tit">
+                    <strong>상품명1</strong>
+                </p>
+                <p class="card-article__summary">
+                    <i class="ico ico--ncoin">N코인</i>
+                    <span class="card-meta__price">50,000</span>
+                </p>
+            </div>
+            <a href="#" target="_blank" class="contents-card__link">상세보기</a>
+        </div>
+        
+    </div>
+</div><!-- // mainContents [launcher-nshop] --></div>
+             <div class="content-notice"><!-- mainContents [launcher-notice] --><div class="contents-card card--type-3" id="launcher-notice" data-card-id="6">
+    <div class="contents-card__bg">
+        <span class="card-img"></span>
+        <span class="card-img-mask"><i class="card-img-mask__bg"></i></span>
+    </div>
+    <div class="contents-card-article">
+        <p class="card-news-tit">
+            <strong>소식 </strong>
+            <a href="/mxm/launcher/board/notice/list" class="card-news-link">
+                <i class="ico ico--more"></i>
+                <span class="blind">더보기</span>
+            </a>
+        </p>
+        <ul class="card-news-list">
+          
+            <li class="card-news-list__item">
+                <a href="#">[完成]03月21日(一) 維護時間說明1</a>
+            </li>
+          
+            <li class="card-news-list__item">
+                <a href="#">[完成]03月21日(一) 維護時間說明2</a>
+            </li>
+          
+            <li class="card-news-list__item">
+                <a href="#">[完成]03月21日(一) 維護時間說明3</a>
+            </li>
+          
+            <li class="card-news-list__item">
+                <a href="#">[完成]03月21日(一) 維護時間說明4</a>
+            </li>
+          
+            <li class="card-news-list__item">
+                <a href="/mxm/launcher/board/notice/view?articleId&#x3D;93&amp;viewMode&#x3D;list&amp;size&#x3D;20">[完成]03月21日(一) 維護時間說明5</a>
+            </li>
+          
+        </ul>
+    </div>
+</div><!-- // mainContents [launcher-notice] --></div>
+             <div class="content-article"><!-- mainContents [launcher-article] --><div class="contents-card card-type-1" data-card-id="4">
+    <div class="sub-contents-card-list">
+      
+        <div class="sub-contents-card" data-sub-card-id="0" data-show="block">
+            <div class="contents-card__bg">
+                <span class="card-img" style="background-image: url('https://rc-upload.plaync.com/file/contents/download/20170818162451-6tOnfaKBceb2Z0isBw390-v4')"></span>
+                <span class="card-img-mask"><i class="card-img-mask__bg"></i></span>
+            </div>
+
+            
+            <div class="card-article__label">
+                <span class="label">라벨1</span>
+            </div>
+            
+
+            <div class="contents-card-article">
+                <p class="card-article__tit"><strong>제목1</strong></p>
+                <p class="card-article__summary">요약1</p>
+            </div>
+
+            
+          
+            <a href="#" target="_blank" class="contents-card__link">상세보기</a>
+
+        </div>
+      
+    </div>
+</div><!-- // mainContents [launcher-article] --></div>
+             <div class="content-guide"><!-- mainContents [launcher-guide] --><div class="contents-card card--type-4" data-card-id="2">
+    <div class="contents-card__bg">
+        <span class="card-img" style="background-image: url('https://rc-upload.plaync.com/file/contents/download/20170818162625-Knd63bl0feGisWpVDZLn0-v4')"></span>
+        <span class="card-img-mask"><i class="card-img-mask__bg"></i></span>
+    </div>
+    <div class="contents-card-article">
+        <ul class="card-news-list">
+          
+            <li class="card-news-list__item">
+                <a href="https://mxm.plaync.com/intro/index" target="_blank">처음 오셨나요?</a>
+            </li>
+          
+            <li class="card-news-list__item">
+                <a href="https://mxm.plaync.com/intro/index" target="_blank">오랜만에 오셨군요!</a>
+            </li>
+          
+            <li class="card-news-list__item">
+                <a href="https://mxm.plaync.com/intro/index" target="_blank">모험을 떠나 보세요!</a>
+            </li>
+          
+        </ul>
+    </div>
+</div><!-- // mainContents [launcher-guide] --></div>
+        </div>
+        <div class="contents-card-nav">
+            <button type="button" class="btn btn__nav btn--list-prev" id="prevCardButton">
+                <i class="ico ico--prev"></i>
+                <span class="blind">prev</span>
+            </button>
+            <button type="button" class="btn btn__nav btn--list-next" id="nextCardButton">
+                <i class="ico ico--next"></i>
+                <span class="blind">next</span>
+            </button>
+        </div>
+     </section>
+</div>
+    <!-- (e) contents -->
+</div>
+
+<div class="ly-player" style="display:none">
+    <button type="button" id="btnPlayerClose" class="btn btn--ly-close">
+        <i class="ico ico--close"></i>
+        <span class="blind">레이어 닫기</span>
+    </button>
+    <div class="player-container">
+        <iframe id="videoPlayer" class="player-iframe" type="text/html" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript" src="https://rc-wstatic.plaync.co.kr/launcher/nc-launcher/vendor/js/slick.min.js"></script>
+<script type="text/javascript" src="https://rc-wstatic.plaync.co.kr/launcher/nc-launcher/v1.6.1/js/main.js?201704260841"></script>
+    
+<script>
+    $(document).ready(function () {
+        $('#launcher-video-list').append( $('.content-video-list').html() );
+        $('#launcher-promotion').append( $('.content-promotion').html() );
+        $('#launcher-nshop').append( $('.content-nshop').html() );
+        $('#launcher-notice').append( $('.content-notice').html() );
+        $('#launcher-article').append( $('.content-article').html() );
+        $('#launcher-guide').append( $('.content-guide').html() );
+        $('#contents-data').empty();
+        new ContentsCard('#contentsCardList');
+    });
+</script>
+
+
+</body>
+</html>
