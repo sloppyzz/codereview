@@ -1,10 +1,3 @@
-# Code Review
-
-- https://rc-tw.ncsoft.com/mxm/launcher/index
-- https://rc-tw.ncsoft.com/mxm/launcher/board/notice/list
-- https://rc-tw.ncsoft.com/mxm/launcher/board/notice/view?articleId=93&viewMode=list&size=20
-
-
 
 ### 이슈
 
@@ -18,7 +11,3 @@
 	useragent 체크로 layout 제어 필요
 
 
-### 참고 
-- 런처 static 리소스 : http://git.korea.ncsoft.corp/projects/FRONTEND_DEVELOP/repos/nc-launcher/browse
-- MXM 런처 : http://git.korea.ncsoft.corp/projects/MXM_WEB/repos/mxm-global-web/browse/src/main/resources/templates/launcher?at=refs%2Fheads%2Fdevelop
-- Contents Admin(rc) : https://rc-contents.ncsoft.net/contents/contents/content?contentStatusList=Activation&pageIndex=1&pageSize=20
