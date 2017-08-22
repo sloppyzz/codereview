@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+	
+	<!-- (s) 게시물 view -->
+	<th:block th:fragment="articleView">
+	    <div id="ncCommunityView" class="nc-community-view"></div>
+	</th:block>
+	<!-- (e) 게시물 view -->
+	
+	<th:block th:fragment="articleViewJs">
+	    <script th:src="|${ui['wstatic.common']}/js/uikit/mobileimageviewer-photoswipe/imageViewer.min.js|"></script>
+	    <script th:src="|${ui['wstatic.common']}/js/uikit/share2/dist/share.2.0.0.js|"></script>
+	    <script th:src="|${ui['wstatic.uikit']}/nccommunity/js/index.1.3.17-2.js|"></script> 
+	    <script>
+	    var _path = '[[${ui["api.domain"]}]]/';
+	    var _boardInfo = {
+	   		type: 'view',
+	   		boardAlias: '[[${boardAlias}]]' || 'free',
+	   		share: false
+	   	}					
+	    </script>
+	    <script th:src="|${ui['wstatic']}/${menu.baseUrl}/js/board.launcher.config${profileUtil.isLive() ? '' : '.dev'}.js|"></script>
+	</th:block>
+
+</body>
+</html>

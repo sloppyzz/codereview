@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+    xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" 
+    layout:decorator="layout/launcherSubLayout">
+<head>
+    <th:block th:replace="launcher/board/_template/head :: board-meta"></th:block>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <!-- (s) 게시물 보기, 댓글 -->
+    <div th:replace="launcher/board/_template/view :: articleView"></div>
+    <div th:replace="launcher/board/_template/comment :: articleComment"></div>
+    <!-- (e) 게시물 보기, 댓글 -->
+</div>
+<th:block layout:fragment="page-js">
+    <th:block th:replace="launcher/board/_template/view :: articleViewJs"></th:block>
+</th:block>
+</body>
+</html>
