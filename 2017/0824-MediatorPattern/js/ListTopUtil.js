@@ -1,10 +1,10 @@
 /**
- * ListTopUtil
- */
+* ListTopUtil
+*/
 class ListTopUtil{
 	constructor( node ) {
 		//...
-  }
+	}
 
 	addEvent() {
 
