@@ -1,6 +1,6 @@
 # Mediator Pattern 소개 및 적용사례
 
-- https://lineagem.plaync.com/board/free/List
+- https://lineagem.plaync.com/board/free/list
 
 ## 특징
 - 객체간의 복잡한 상호 작용을 Mediator Class에 위임
